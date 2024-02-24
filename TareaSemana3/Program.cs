@@ -1,17 +1,21 @@
-﻿int edad;
+﻿int precio;
+double descuento, preciocondescuento;
 
 try
 {
-    Console.WriteLine("Por favor ingresa tu edad");
-    edad = int.Parse(Console.ReadLine());
+    Console.WriteLine("Por favor ingresa el precio de tu producto");
+    precio = int.Parse(Console.ReadLine());
 
-    if (edad >= 18)
+    if (precio >= 100)
     {
-        Console.WriteLine("Eres mayor de edad, pasa adelante");
+        descuento = precio * 0.10;
+        preciocondescuento = precio - descuento;
+        Console.WriteLine("Felicidades, tu producto tiene el 10% de descuento");
+        Console.WriteLine("El precio de tu producto es: " + preciocondescuento);
     }
     else
     {
-        Console.WriteLine("Eres menor de edad, por favor retirate");
+        Console.WriteLine("Tu producto no tiene descuento, su precio es: " + precio);
     }
 }
 catch (Exception ex)
