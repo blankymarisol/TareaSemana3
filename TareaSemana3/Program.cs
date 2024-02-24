@@ -4,26 +4,26 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("ingresa el servicio que desea consultar");
-        string servicio = Console.ReadLine();
-        string pago; 
+        Console.WriteLine("ingresa el idioma en que deseas el mensaje");
+        string idioma = Console.ReadLine();
+        string mensaje; 
 
 
-        switch (servicio)
+        switch (idioma)
         {
-            case "lavado de auto":
-                pago = "Q.35.00";
+            case "ingles":
+                mensaje = "Welcome to my program";
                 break;
-            case "cambio de aceite":
-                pago = "Q.55.00";
+            case "espanol":
+                mensaje = "Bienvenido a mi programa";
                 break;
-            case "revision mecanica":
-                pago = "Q.45.00";
+            case "frances":
+                mensaje = "Bienvenue dans mon programme";
                 break;
             default:
-                Console.WriteLine("El servicio ingresado no es valido :(");
+                Console.WriteLine("El idioma solicitado no es valido :(");
                 return;
         }
-        Console.WriteLine($"El costo del servicio es: " + pago);
+        Console.WriteLine($"Tu mensaje es: " + mensaje);
     }
 }
