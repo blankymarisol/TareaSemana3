@@ -1,20 +1,17 @@
-﻿string usuario = "blanky";
-string contrasena = "F@rmac1a";
+﻿int numero;
 
 try
 {
-    Console.WriteLine("ingresa el usuario");
-    usuario = Console.ReadLine();
-    Console.WriteLine("ingresa tu contrasena");
-    contrasena = Console.ReadLine();
+    Console.WriteLine("Por ingresa un numero");
+    numero = int.Parse(Console.ReadLine());
 
-    if (usuario == "blanky" && contrasena == "F@rmac1a")
+    if (numero % 2 == 0)
     {
-        Console.WriteLine("Inicio de sesion exitoso");
+        Console.WriteLine("El numero ingresado es par");
     }
     else
     {
-        Console.WriteLine("Usuario o contrasena incorrecto");
+        Console.WriteLine("El numero ingresado es impar");
     }
 }
 catch (Exception ex)
