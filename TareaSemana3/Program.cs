@@ -4,38 +4,26 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("ingresa el numero de 1-7");
-        int numero = Convert.ToInt32(Console.ReadLine().ToLower());
-        string dia; 
+        Console.WriteLine("ingresa el servicio que desea consultar");
+        string servicio = Console.ReadLine();
+        string pago; 
 
 
-        switch (numero)
+        switch (servicio)
         {
-            case 1:
-                dia = "lunes";
+            case "lavado de auto":
+                pago = "Q.35.00";
                 break;
-            case 2:
-                dia = "martes";
+            case "cambio de aceite":
+                pago = "Q.55.00";
                 break;
-            case 3:
-                dia = "miercoles";
-                break;
-            case 4:
-                dia = "jueves";
-                break;
-            case 5:
-                dia = "viernes";
-                break;
-            case 6:
-                dia = "sabado";
-                break;
-            case 7:
-                dia = "domingo";
+            case "revision mecanica":
+                pago = "Q.45.00";
                 break;
             default:
-                Console.WriteLine("No ingresas el numero correcto :(");
+                Console.WriteLine("El servicio ingresado no es valido :(");
                 return;
         }
-        Console.WriteLine($"El dia que solicitaste es: " + dia);
+        Console.WriteLine($"El costo del servicio es: " + pago);
     }
 }
