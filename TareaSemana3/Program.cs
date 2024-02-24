@@ -1,26 +1,17 @@
-﻿int num1, num2, num3;
+﻿int edad;
 
 try
 {
+    Console.WriteLine("Por favor ingresa tu edad");
+    edad = int.Parse(Console.ReadLine());
 
-    Console.WriteLine("Por favor ingresa un numero");
-    num1 = int.Parse(Console.ReadLine());
-    Console.WriteLine("Por favor ingresa un numero");
-    num2 = int.Parse(Console.ReadLine());
-    Console.WriteLine("Por favor ingresa un numero");
-    num3 = int.Parse(Console.ReadLine());
-
-    if (num1 >= num2 && num1 >= num3)
+    if (edad >= 18)
     {
-        Console.WriteLine("El numero mayor es: " + num1);
-    }
-    else if (num2 >= num1 && num2 >= num3)
-    {
-        Console.WriteLine("El numero mayor es: " + num2);
+        Console.WriteLine("Eres mayor de edad, pasa adelante");
     }
     else
     {
-        Console.WriteLine("El numero mayor es: " + num3);
+        Console.WriteLine("Eres menor de edad, por favor retirate");
     }
 }
 catch (Exception ex)
