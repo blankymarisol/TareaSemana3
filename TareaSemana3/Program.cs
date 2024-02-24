@@ -4,31 +4,38 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("ingrese un numero 1-5 en letra");
-        string letra = Console.ReadLine().ToLower();
-        int numero;
+        Console.WriteLine("ingresa el numero de 1-7");
+        int numero = Convert.ToInt32(Console.ReadLine().ToLower());
+        string dia; 
 
-        switch (letra)
+
+        switch (numero)
         {
-            case "uno":
-                numero = 1;
+            case 1:
+                dia = "lunes";
                 break;
-            case "dos":
-                numero = 2;
+            case 2:
+                dia = "martes";
                 break;
-            case "tres":
-                numero = 3;
+            case 3:
+                dia = "miercoles";
                 break;
-            case "cuatro":
-                numero = 4;
+            case 4:
+                dia = "jueves";
                 break;
-            case "cinco":
-                numero = 5;
+            case 5:
+                dia = "viernes";
+                break;
+            case 6:
+                dia = "sabado";
+                break;
+            case 7:
+                dia = "domingo";
                 break;
             default:
                 Console.WriteLine("No ingresas el numero correcto :(");
                 return;
         }
-        Console.WriteLine($"El numero en digito es: " + numero);
+        Console.WriteLine($"El dia que solicitaste es: " + dia);
     }
 }
