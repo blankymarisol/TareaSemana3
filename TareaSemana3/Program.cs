@@ -1,21 +1,20 @@
-﻿int precio;
-double descuento, preciocondescuento;
+﻿string usuario = "blanky";
+string contrasena = "F@rmac1a";
 
 try
 {
-    Console.WriteLine("Por favor ingresa el precio de tu producto");
-    precio = int.Parse(Console.ReadLine());
+    Console.WriteLine("ingresa el usuario");
+    usuario = Console.ReadLine();
+    Console.WriteLine("ingresa tu contrasena");
+    contrasena = Console.ReadLine();
 
-    if (precio >= 100)
+    if (usuario == "blanky" && contrasena == "F@rmac1a")
     {
-        descuento = precio * 0.10;
-        preciocondescuento = precio - descuento;
-        Console.WriteLine("Felicidades, tu producto tiene el 10% de descuento");
-        Console.WriteLine("El precio de tu producto es: " + preciocondescuento);
+        Console.WriteLine("Inicio de sesion exitoso");
     }
     else
     {
-        Console.WriteLine("Tu producto no tiene descuento, su precio es: " + precio);
+        Console.WriteLine("Usuario o contrasena incorrecto");
     }
 }
 catch (Exception ex)
