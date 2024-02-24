@@ -1,24 +1,33 @@
-﻿int edad, monto;
-string nombre, apellido;
+﻿int opcion;
+double triangulo, cuadrado, circulo, basse, altura, lado, radio;
 
 try
 {
-    Console.WriteLine("Ingresa tu nombre");
-    nombre = Console.ReadLine();
-    Console.WriteLine("Ingresa tu apellido");
-    apellido = Console.ReadLine();
-    Console.WriteLine("Ingrese el monto que desea");
-    monto = int.Parse(Console.ReadLine());
-    Console.WriteLine("Ingrese su edad");
-    edad = int.Parse(Console.ReadLine());
+    Console.WriteLine("Elige una opcion: 1. Triangulo, 2. Cuadrado, 3. Circulo");
+    opcion = int.Parse(Console.ReadLine());
 
-    if (monto >= 5000 && edad <= 60)
+    if (opcion == 1)
     {
-        Console.WriteLine(nombre); Console.WriteLine(apellido); Console.WriteLine("Su prestamo ha sido aprobado");
+        Console.WriteLine("Ingrese la base del triangulo");
+        basse = int.Parse(Console.ReadLine());
+        Console.WriteLine("Ingrese la altura del triangulo");
+        altura = int.Parse(Console.ReadLine());
+        triangulo = (basse * altura) / 2;
+        Console.WriteLine("El area del triangulo es: " + triangulo);
+    }
+    else if (opcion == 2)
+    {
+        Console.WriteLine("Ingrese la medida del lado del cuadrado");
+        lado = int.Parse(Console.ReadLine());
+        cuadrado = lado * lado;
+        Console.WriteLine("El area del cuadrado es: " + cuadrado);
     }
     else
     {
-        Console.WriteLine(nombre); Console.WriteLine(apellido); Console.WriteLine("Su prestamo no ha sido aprobado");
+        Console.WriteLine("Ingrese el radio del circulo");
+        radio = int.Parse(Console.ReadLine());
+        circulo = (radio * radio) * 3.1416;
+        Console.WriteLine("El area del circulo es: " + circulo);
     }
 }
 catch (Exception ex)
