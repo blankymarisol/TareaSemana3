@@ -1,17 +1,24 @@
-﻿int numero;
+﻿int edad, monto;
+string nombre, apellido;
 
 try
 {
-    Console.WriteLine("Por ingresa un numero");
-    numero = int.Parse(Console.ReadLine());
+    Console.WriteLine("Ingresa tu nombre");
+    nombre = Console.ReadLine();
+    Console.WriteLine("Ingresa tu apellido");
+    apellido = Console.ReadLine();
+    Console.WriteLine("Ingrese el monto que desea");
+    monto = int.Parse(Console.ReadLine());
+    Console.WriteLine("Ingrese su edad");
+    edad = int.Parse(Console.ReadLine());
 
-    if (numero % 2 == 0)
+    if (monto >= 5000 && edad <= 60)
     {
-        Console.WriteLine("El numero ingresado es par");
+        Console.WriteLine(nombre); Console.WriteLine(apellido); Console.WriteLine("Su prestamo ha sido aprobado");
     }
     else
     {
-        Console.WriteLine("El numero ingresado es impar");
+        Console.WriteLine(nombre); Console.WriteLine(apellido); Console.WriteLine("Su prestamo no ha sido aprobado");
     }
 }
 catch (Exception ex)
